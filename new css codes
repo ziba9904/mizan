@@ -1,0 +1,279 @@
+/* فونت‌ها */
+@font-face {
+    font-family: 'lalezar';
+    src: url('../assets/fonts/Lalezar.ttf');
+}
+@font-face {
+    font-family: 'yekan';
+    src: url('../assets/fonts/Yekan.ttf');
+}
+
+/* ریست */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: yekan;
+    background: black;
+    color: rgb(235, 234, 234);
+}
+
+/* --- هدر ثابت --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(40, 172, 106);
+    z-index: 1000;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: 'lalezar';
+    font-size: 1.2rem;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: white;
+    background: #317c4d;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    background: #48aa6e;
+    color: black;
+}
+
+/* عکس هدر */
+.hero-img {
+    margin-top: 80px; /* فاصله از هدر ثابت */
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* گالری */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.row-img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.row-img img {
+    width: 30%;
+    min-width: 150px;
+    border-radius: 60px;
+    object-fit: cover;
+}
+
+/* اطلاعات */
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.information {
+    background-color: black;
+    color: rgb(171, 255, 199);
+    text-align: justify;
+    border: 3px solid rgb(61, 143, 88);
+    border-radius: 30px;
+    font-size: 1.5rem;
+    margin: 20px auto;
+    padding: 3rem;
+    max-width: 800px;
+    line-height: 1.8;
+}
+.information p {
+    text-align-last: right;
+}
+.information ul {
+    margin: 20px 0;
+    padding-right: 20px;
+}
+.logo-image {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid rgb(61, 143, 88);
+    border-radius: 16px;
+}
+
+/* فرم */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10px;
+}
+
+.form-container {
+    background: #6bc07e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #131212;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* دکمه‌ها */
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.button-group button {
+    flex: 1 1 120px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#whatsappBtn {
+    background-color: #317c4d; /* سبز واتساپ */
+    color: white;
+}
+#whatsappBtn:hover {
+    background-color: #1ebe5c;
+}
+
+#smsBtn {
+    background-color: #317c4d; /* سبز تیره SMS */
+    color: white;
+}
+#smsBtn:hover {
+    background-color: #48aa6e;
+}
+
+/* فوتر */
+.site-footer {
+    background-color: rgb(40, 172, 106);
+    color: white;
+    padding: 30px 20px;
+    font-family: yekan;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-item {
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+.footer-item h4 {
+    margin-bottom: 10px;
+    font-family: lalezar;
+    font-size: 1.2rem;
+}
+
+.footer-item p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* --- ریسپانسیو --- */
+@media (max-width: 1024px) {
+    .row-img img {
+        width: 45%;
+    }
+    .information {
+        font-size: 1.3rem;
+        padding: 2rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .row-img img {
+        width: 80%;
+    }
+    .form-wrapper {
+        padding: 40px 10px;
+    }
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+    .information {
+        font-size: 1.1rem;
+        padding: 1.5rem;
+    }
+    .footer-item h4 {
+        font-size: 1rem;
+    }
+    .footer-item p {
+        font-size: 0.9rem;
+    }
+}
