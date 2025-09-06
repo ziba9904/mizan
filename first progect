@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mizan Service</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<!-- هدر ثابت -->
+<div class="header">
+    <nav>
+        <p><a href="tel:09121234567">📞 تماس با ما</a></p>
+        <h1>تعمیرات تخصصی لوازم خانگی</h1>
+        <p><a href="https://maps.google.com/?q=35.51019662913888,51.51514280138039" target="_blank">📍 لوکیشن</a></p>
+    </nav>
+</div>
+
+<!-- عکس هدر قابل اسکرول -->
+<div class="hero-img">
+    <img src="./images/wallpaper.jpg" alt="hero image">
+</div>
+
+<!-- گالری -->
+<section class="gallery">
+    <div class="row-img">
+        <img src="./images/number1.jpg" alt="number1">
+        <img src="./images/number2.jpg" alt="number2">
+        <img src="./images/number3.jpg" alt="number3">
+    </div>
+    <div class="row-img">
+        <img src="./images/number4.jpg" alt="number4">
+        <img src="./images/number5.jpg" alt="number5">
+        <img src="./images/number6.jpg" alt="number6">
+    </div>
+</section>
+
+<!-- بخش اطلاعات -->
+<section class="information">
+    <h2>خدمات میزان سرویس</h2>
+    <img src="./images/logo-image.jpg" alt="logo" class="logo-image">
+    <p>میزان سرویس متناسب با مدل و برند دستگاه شما بهترین خدمات تعمیر و تعویض قطعات را ارایه میدهد </p>
+    <p>اگر وسایل خانه‌تان دچار مشکل شده‌اند و به دنبال تعمیرکاری مطمئن و حرفه‌ای هستید، ما در کنار شما هستیم</p>
+    <ul class="checklist" dir="rtl">
+        <li>تعمیر انواع لوازم خانگی (یخچال، لباسشویی، ظرفشویی، جاروبرقی، مایکروویو)</li>
+        <li>اعزام تعمیرکار به تمام نقاط شهر در سریع‌ترین زمان</li>
+        <li>استفاده از قطعات اصلی و ضمانت خدمات</li>
+        <li>هزینه منصفانه و شفاف</li>
+    </ul>
+    <p>دیگر نیازی به حمل دستگاه‌های سنگین تا تعمیرگاه نیست؛ کافی است با ما تماس بگیرید تا کارشناسان ما در محل شما مشکل را برطرف کنند</p>
+</section>
+
+<!-- فرم ثبت درخواست -->
+<div class="form-wrapper">
+    <div class="form-container">
+        <h3>فرم ثبت درخواست</h3>
+        <form id="requestForm">
+            <label for="name">نام و نام خانوادگی:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">شماره تماس:</label>
+            <input type="text" id="phone" required>
+
+            <label for="message">توضیحات و نام دستگاه:</label>
+            <textarea id="message" required></textarea>
+
+            <div class="button-group">
+                <button type="submit" id="whatsappBtn">ارسال با واتسپ</button>
+                <button type="button" id="smsBtn">ارسال با پیامک</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- فوتر ریسپانسیو -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-item">
+            <h4>تماس با ما</h4>
+            <p>شماره تماس ثابت: 0900275361</p>
+            <p>شماره همراه: 09900276361</p>
+        </div>
+        <div class="footer-item">
+            <h4>مدیریت</h4>
+            <p>با مدیریت: حسین امامی</p>
+        </div>
+        <div class="footer-item">
+            <h4>کپی رایت</h4>
+            <p>© 2025 میزان سرویس. تمامی حقوق محفوظ است.</p>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
