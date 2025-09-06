@@ -1,0 +1,32 @@
+// گرفتن فرم
+const form = document.getElementById("requestForm");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault(); // جلوگیری از ارسال معمولی فرم
+
+    // گرفتن مقادیر فرم
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if(name === "" || phone === "") {
+        alert("لطفاً نام و شماره تماس خود را وارد کنید.");
+        return;
+    }
+
+    // ساخت پیام با خط جدید
+    const text = `نام و نام خانوادگی: ${name}%0Aشماره تماس: ${phone}%0Aتوضیحات: ${message}`;
+
+    // شماره واتساپ شما (کد کشور بدون +)
+    const whatsappNumber = "9900275361"; 
+    const subNumber="09900275361"
+
+    // لینک واتساپ
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+    // باز کردن لینک در تب جدید
+    window.open(url, "_blank");
+
+    // پاک کردن فرم بعد از ارسال (اختیاری)
+    form.reset();
+});
